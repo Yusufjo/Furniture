@@ -1612,10 +1612,10 @@
             </objects>
             <point key="canvasLocation" x="2500" y="-301"/>
         </scene>
-        <!--Natification View Controller-->
+        <!--Notification View Controller-->
         <scene sceneID="fSR-qE-PLB">
             <objects>
-                <viewController id="zVw-Fi-inv" customClass="NatificationViewController" customModule="Furniture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zVw-Fi-inv" customClass="NotificationViewController" customModule="Furniture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i3x-p4-bhn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1642,7 +1642,7 @@
                                 <rect key="frame" x="0.0" y="43" width="393" height="760"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="natificationCell" rowHeight="111" id="yvI-DZ-6Yd" customClass="NatificationTableViewCell" customModule="Furniture" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notificationCell" rowHeight="111" id="yvI-DZ-6Yd" customClass="NotificationTableViewCell" customModule="Furniture" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvI-DZ-6Yd" id="kb4-um-bb3">
@@ -1689,6 +1689,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="natificationImageView" destination="vyb-aC-yoJ" id="hA2-8s-cMp"/>
+                                            <outlet property="newHotLabel" destination="fP3-jp-jxJ" id="gik-lk-eXF"/>
+                                            <outlet property="subTitle" destination="bDb-K1-Esh" id="BFQ-4x-r0F"/>
+                                            <outlet property="titleLabel" destination="Neb-5t-xBF" id="YY6-jb-kF9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1707,6 +1713,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bell" selectedImage="sellectedbell" id="0f8-eo-x9T"/>
+                    <connections>
+                        <outlet property="notificationTableView" destination="Da8-lJ-Hwg" id="w7Q-2x-xRw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3u-Tn-6SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
