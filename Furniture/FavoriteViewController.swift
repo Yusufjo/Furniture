@@ -30,7 +30,7 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell") as! FavoriteTableViewCell
         let favorite = favorites[indexPath.row]
-        cell.favoritePriceLabel.text = "\(favorite.price)"
+        cell.favoritePriceLabel.text = "\(favorite.price) $"
         cell.favoriteImageView.image = UIImage(named: favorite.image)
         cell.favoriteTitleLabel.text = favorite.title
         

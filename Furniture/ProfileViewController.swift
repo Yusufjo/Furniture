@@ -24,11 +24,11 @@ class ProfileViewController: UIViewController {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
 
-        shadow(view: myOrdersButton)
-        shadow(view: shippingAdressButton)
-        shadow(view: paymentMethod)
-        shadow(view: myReviewsButton)
-        shadow(view: settingButton)
+//        shadow(view: myOrdersButton)
+//        shadow(view: shippingAdressButton)
+//        shadow(view: paymentMethod)
+//        shadow(view: myReviewsButton)
+//        shadow(view: settingButton)
         
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(myOrdersButtonTapped))
 //        myOrdersButton.addGestureRecognizer(tapGesture)
