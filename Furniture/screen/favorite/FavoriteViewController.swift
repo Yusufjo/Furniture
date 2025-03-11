@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class FavoriteViewController: UIViewController {
     var favorites: [Favorites] = []
     @IBOutlet weak var favoritesTableView: UITableView!
     override func viewDidLoad() {
@@ -23,20 +23,10 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
             Favorites(image: "anasayfaUrun1", title: "Simple Desk", price: 50.00, quantity: 1),
             Favorites(image: "favoritesehpa", title: "Coffee Table", price: 50.00, quantity: 1)]
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell") as! FavoriteTableViewCell
-        let favorite = favorites[indexPath.row]
-        cell.favoritePriceLabel.text = "\(favorite.price) $"
-        cell.favoriteImageView.image = UIImage(named: favorite.image)
-        cell.favoriteTitleLabel.text = favorite.title
-        
-        return cell
-    }
+  
     @IBAction func addAllMyCartButtonTapped(_ sender: Any) {
     }
     
 }
+
+

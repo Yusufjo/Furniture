@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AnaEkranCollectionViewCell: UICollectionViewCell {
+class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageAnaSayfa: UIImageView!
     @IBOutlet weak var baslikLabel: UILabel!
     @IBOutlet weak var fiyatLabel: UILabel!

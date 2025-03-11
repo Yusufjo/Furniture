@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		158E44A82D7CB05E009D2B89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 158E44A62D7CB05E009D2B89 /* Localizable.strings */; };
 		15C943222D774C7900F64A29 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 15C943212D774C7900F64A29 /* FirebaseAuth */; };
 		15C943242D774C7900F64A29 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 15C943232D774C7900F64A29 /* FirebaseAuthCombine-Community */; };
 		15C943262D774C7900F64A29 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 15C943252D774C7900F64A29 /* FirebaseCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		158E44A72D7CB05E009D2B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		15F6D36A2D74940400EE005A /* Furniture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furniture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +54,6 @@
 		15F6D3612D74940400EE005A = {
 			isa = PBXGroup;
 			children = (
-				158E44A62D7CB05E009D2B89 /* Localizable.strings */,
 				15F6D36C2D74940400EE005A /* Furniture */,
 				15F6D36B2D74940400EE005A /* Products */,
 			);
@@ -118,8 +115,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				tr,
+				Base,
 			);
 			mainGroup = 15F6D3612D74940400EE005A;
 			minimizedProjectReferenceProxies = 1;
@@ -141,7 +138,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158E44A82D7CB05E009D2B89 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,17 +152,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		158E44A62D7CB05E009D2B89 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				158E44A72D7CB05E009D2B89 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		15F6D37E2D74940500EE005A /* Debug */ = {

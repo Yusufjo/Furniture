@@ -15,17 +15,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shadow(view: loginView)
-        // Do any additional setup after loading the view.
+        loginView.addShadow()
     }
-    func shadow(view: UIView){
-        view.layer.shadowColor = UIColor.black.cgColor   // Gölgenin rengi
-        view.layer.shadowOffset = CGSize(width: 0, height: 2)  // Gölgenin pozisyonu
-        view.layer.shadowOpacity = 0.09    // Gölgenin şeffaflık derecesi
-        
-    }
-
-    
     @IBAction func loginButton(_ sender: Any) {
         if emailTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true{
             errorMessage(title: "Hata!", message: "Lütfen boş alan bırakmayınız!")
@@ -47,14 +38,4 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

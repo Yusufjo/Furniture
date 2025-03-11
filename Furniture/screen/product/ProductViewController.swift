@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class ProductViewController: UIViewController,UICollectionViewDelegateFlowLayout {
 
     var selectedProduct: HomeProduct?
     @IBOutlet weak var productFlowLayout: UICollectionViewFlowLayout!
@@ -17,6 +17,7 @@ class ProductViewController: UIViewController, UICollectionViewDelegate ,UIColle
     @IBOutlet weak var customView: UIView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    
     let images = ["sehpaSellected", "anasayfaUrun2", "anasayfaUrun1"]
     
     var itemCount = 1
@@ -35,8 +36,6 @@ class ProductViewController: UIViewController, UICollectionViewDelegate ,UIColle
         pageControl.currentPage = 0
         
         productFlowLayout.scrollDirection = .horizontal
-        // Do any additional setup after loading the view.
-        
         updatePrice()
         updateItemLabel()
         
@@ -80,19 +79,6 @@ class ProductViewController: UIViewController, UICollectionViewDelegate ,UIColle
         let totalPrice = unitPrice * Double(itemCount)
         priceLabel.text = "$\(totalPrice)"
     }
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCollectionViewCell
-        cell.imageView.image = UIImage(named: images[indexPath.row])
-        return  cell
-    }
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x / scrollView.frame.width)
         pageControl.currentPage = Int(pageIndex)

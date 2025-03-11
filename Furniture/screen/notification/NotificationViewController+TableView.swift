@@ -1,22 +1,14 @@
 //
-//  NotificationViewController.swift
+//  NotificationViewController+TableView.swift
 //  Furniture
 //
-//  Created by yusuf Şentürk on 5.03.2025.
+//  Created by yusuf Şentürk on 9.03.2025.
 //
 
+import Foundation
 import UIKit
 
-class NotificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    @IBOutlet weak var notificationTableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        notificationTableView.delegate = self
-        notificationTableView.dataSource = self
-       
-        
-    }
+extension NotificationViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 9
@@ -30,4 +22,3 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         return cell
     }
 }
-

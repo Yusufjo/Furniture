@@ -7,9 +7,8 @@
 
 import UIKit
 
-class UstCollectionViewCell: UICollectionViewCell {
+class HomeUpCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var image: UIImageView!
-    
 }
