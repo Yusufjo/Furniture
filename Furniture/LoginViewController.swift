@@ -12,30 +12,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgotButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var welcomeBackLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.addShadow()
+        localizeUIElements()
     }
     @IBAction func loginButton(_ sender: Any) {
-        if emailTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true{
-            errorMessage(title: "Hata!", message: "Lütfen boş alan bırakmayınız!")
-        }else{
-            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { result, error in
-                if let error = error {
-                    // Eğer hata varsa, mesaj göster
-                    self.errorMessage(title: "Giriş Hatası", message: error.localizedDescription)
-                } else {
-                    // Eğer başarılı ise, seguiyi tetikle
-                    self.performSegue(withIdentifier: "toFurniture", sender: nil)
-                }
-            }
-        }
+        loginController()
     }
     
-    func errorMessage(title:String,message:String){
-        let alert = UIAlertController(title: title, message:message, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func localizeUIElements() {
+        loginButton.localize(localizableID: "logIn")
+        forgotButton.localize(localizableID: "forgot")
+        signUpButton.localize(localizableID: "signUp")
+        
+        
+        helloLabel.localize(localizableID: "hello")
+        welcomeBackLabel.localize(localizableID: "welcome")
+        emailLabel.localize(localizableID: "email")
+        passwordLabel.localize(localizableID: "password")
     }
+    
 }
