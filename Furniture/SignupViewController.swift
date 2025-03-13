@@ -19,7 +19,6 @@ class SignupViewController: UIViewController {
         view.layer.shadowColor = UIColor.black.cgColor   // Gölgenin rengi
         view.layer.shadowOffset = CGSize(width: 0, height: 2)  // Gölgenin pozisyonu
         view.layer.shadowOpacity = 0.30    // Gölgenin şeffaflık derecesi
-        
     }
    
     

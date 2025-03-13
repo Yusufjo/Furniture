@@ -8,22 +8,17 @@
 import UIKit
 
 class ForgotViewController: UIViewController {
-
+    @IBOutlet weak var forgotView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        shadow(view: forgotView)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func shadow(view: UIView){
+        view.layer.shadowColor = UIColor.black.cgColor   // Gölgenin rengi
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)  // Gölgenin pozisyonu
+        view.layer.shadowOpacity = 0.30    // Gölgenin şeffaflık derecesi
     }
-    */
+
 
 }
