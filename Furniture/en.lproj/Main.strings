@@ -26,8 +26,8 @@
 /* Class = "UILabel"; text = "$ 50.00"; ObjectID = "AN5-lS-dm6"; */
 "AN5-lS-dm6.text" = "$ 50.00";
 
-/* Class = "UIButton"; configuration.title = "Log istanbul"; ObjectID = "AVs-vu-J4b"; */
-"AVs-vu-J4b.configuration.title" = "Log istanbul";
+/* Class = "UIButton"; configuration.title = "Log in"; ObjectID = "AVs-vu-J4b"; */
+"AVs-vu-J4b.configuration.title" = "Log in";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AVs-vu-J4b"; */
 "AVs-vu-J4b.normalTitle" = "Button";
