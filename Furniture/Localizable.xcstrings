@@ -139,6 +139,23 @@
         }
       }
     },
+    "forgotLabel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forgot Password?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifreni mi Unuttun?"
+          }
+        }
+      }
+    },
     "hello" : {
       "comment" : "login Page",
       "extractionState" : "manual",
@@ -223,6 +240,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Şifre"
+          }
+        }
+      }
+    },
+    "reset" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Reset Link"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre Yenileme Linki Gönder"
           }
         }
       }

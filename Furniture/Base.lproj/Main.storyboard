@@ -1690,8 +1690,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="HLb-da-guJ" id="KXm-XR-5JI"/>
                         <outlet property="emailTextField" destination="yrF-JX-Fuz" id="Qms-ER-evJ"/>
+                        <outlet property="forgotPasswordLabel" destination="PVB-ga-6h5" id="kky-sA-MPu"/>
                         <outlet property="forgotView" destination="Uwu-wY-XVl" id="6ue-0n-uMt"/>
+                        <outlet property="resetButton" destination="bEn-iW-gIL" id="fgL-J6-37a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZ9-2U-HVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1700,7 +1703,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nua-wS-F6X"/>
         <segue reference="3od-bz-evJ"/>
     </inferredMetricsTieBreakers>
     <resources>
