@@ -20,5 +20,7 @@ class ForgotViewController: UIViewController {
         view.layer.shadowOpacity = 0.30    // Gölgenin şeffaflık derecesi
     }
 
-
+    @IBAction func resetButtonTapped(_ sender: Any) {
+    }
+    
 }
