@@ -48,7 +48,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCell" id="GXH-p5-FHU" customClass="HomeCollectionViewCell" customModule="Furniture" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductViewCell" id="GXH-p5-FHU" customClass="ProductViewCell" customModule="Furniture" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="261"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DvY-bF-zEB">
@@ -101,9 +101,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="186" height="261"/>
                                         <connections>
-                                            <outlet property="baslikLabel" destination="HVj-kZ-2Ac" id="Dmj-wf-vSQ"/>
-                                            <outlet property="fiyatLabel" destination="TFd-3A-L37" id="OSc-cx-orH"/>
-                                            <outlet property="imageAnaSayfa" destination="DGY-Wh-gqQ" id="yQZ-sf-1WD"/>
+                                            <outlet property="productImageView" destination="DGY-Wh-gqQ" id="ZAV-iU-uSm"/>
+                                            <outlet property="productNameLabel" destination="HVj-kZ-2Ac" id="OHn-9o-WdP"/>
+                                            <outlet property="productPriceLabel" destination="TFd-3A-L37" id="VN8-pN-EOf"/>
                                             <segue destination="ZZg-x5-UJr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="NG7-Bu-dB2"/>
                                         </connections>
                                     </collectionViewCell>
