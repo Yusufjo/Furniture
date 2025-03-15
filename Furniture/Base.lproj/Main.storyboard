@@ -188,8 +188,8 @@
                     <navigationItem key="navigationItem" id="zjD-43-O0d"/>
                     <connections>
                         <outlet property="anaEkranCollectionView" destination="LdR-Oz-EJX" id="h0F-BS-hol"/>
-                        <outlet property="anasayfaFlowLayout" destination="Y4z-Gf-lWl" id="mAH-dy-XLf"/>
-                        <outlet property="flowLayout" destination="Hpo-gM-mWb" id="jGG-Am-zU5"/>
+                        <outlet property="categoriesFlowLayout" destination="Hpo-gM-mWb" id="jGG-Am-zU5"/>
+                        <outlet property="productsFlowLayout" destination="Y4z-Gf-lWl" id="mAH-dy-XLf"/>
                         <outlet property="ustCollectionView" destination="XN3-Z6-iUG" id="50G-xQ-7gm"/>
                     </connections>
                 </viewController>

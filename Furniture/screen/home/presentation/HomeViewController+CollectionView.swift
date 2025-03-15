@@ -5,21 +5,22 @@
 //  Created by yusuf Şentürk on 9.03.2025.
 //
 
-import Foundation
+
+// TODO omer create two different Delegates for each collection view
 import UIKit
 extension HomeViewController: UICollectionViewDelegate ,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == anaEkranCollectionView {
-            return homeProducts.count // Dizinin eleman sayısını döndür
-        } else if collectionView == ustCollectionView {
+        if collectionView == productsCollectionView {
+            return homeProducts.count
+        } else if collectionView == categoriesCollectionView {
             return categories.count
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == ustCollectionView {
+        if collectionView == categoriesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeUpCollection", for: indexPath) as! HomeUpCollectionViewCell
             let category = categories[indexPath.item]
             
@@ -35,7 +36,7 @@ extension HomeViewController: UICollectionViewDelegate ,UICollectionViewDataSour
             }
             
             return cell
-        } else if collectionView == anaEkranCollectionView {
+        } else if collectionView == productsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
             let products = homeProducts[indexPath.item]
             
@@ -49,13 +50,12 @@ extension HomeViewController: UICollectionViewDelegate ,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedProduct = categories[indexPath.item]
         
-        // Aynı kategoriye tıklanırsa seçimi kaldır
         if selectedCategory == selectedProduct.title {
             selectedCategory = nil
         } else {
             selectedCategory = selectedProduct.title
         }
         
-        collectionView.reloadData() // CollectionView'u güncelle
+        collectionView.reloadData()
     }
 }
