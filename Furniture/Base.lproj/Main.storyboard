@@ -117,7 +117,7 @@
                                 </constraints>
                                 <collectionViewLayout key="collectionViewLayout" id="Hpo-gM-mWb" customClass="UICollectionViewFlowLayout" propertyAccessControl="all"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="homeUpCollection" id="nav-6J-KR6" customClass="HomeUpCollectionViewCell" customModule="Furniture" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CategoriesViewCell" id="nav-6J-KR6" customClass="CategoryViewCell" customModule="Furniture" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HPQ-c7-tn7">
@@ -125,32 +125,36 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkJ-U9-qsP">
-                                                    <rect key="frame" x="20.333333333333332" y="49" width="35.333333333333343" height="11"/>
+                                                    <rect key="frame" x="20.333333333333332" y="44" width="35.333333333333343" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundust" translatesAutoresizingMaskIntoConstraints="NO" id="fuj-Br-DmO">
-                                                    <rect key="frame" x="16" y="1" width="44" height="44"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-ke-FAC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="44"/>
+                                                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="NDT-P7-RB3"/>
-                                                        <constraint firstAttribute="width" constant="44" id="wRI-5b-PzI"/>
+                                                        <constraint firstAttribute="width" constant="44" id="5BH-z1-JAC"/>
+                                                        <constraint firstAttribute="height" constant="44" id="7vR-lk-P8o"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-ke-FAC">
-                                                    <rect key="frame" x="24" y="9" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundust" translatesAutoresizingMaskIntoConstraints="NO" id="fuj-Br-DmO">
+                                                    <rect key="frame" x="26" y="10" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="NDT-P7-RB3"/>
+                                                        <constraint firstAttribute="width" constant="24" id="wRI-5b-PzI"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="UkJ-U9-qsP" firstAttribute="centerX" secondItem="HPQ-c7-tn7" secondAttribute="centerX" id="3KU-zd-Dgw"/>
                                                 <constraint firstItem="fuj-Br-DmO" firstAttribute="centerX" secondItem="HPQ-c7-tn7" secondAttribute="centerX" id="4kf-ul-jZN"/>
-                                                <constraint firstItem="fuj-Br-DmO" firstAttribute="top" secondItem="HPQ-c7-tn7" secondAttribute="top" constant="1" id="DMU-Fg-YCb"/>
-                                                <constraint firstAttribute="bottom" secondItem="UkJ-U9-qsP" secondAttribute="bottom" constant="5" id="QIh-iZ-QmE"/>
-                                                <constraint firstItem="fuj-Br-DmO" firstAttribute="bottom" secondItem="Cfe-ke-FAC" secondAttribute="bottom" constant="8" id="ixL-sq-Fg9"/>
-                                                <constraint firstItem="Cfe-ke-FAC" firstAttribute="top" secondItem="fuj-Br-DmO" secondAttribute="top" constant="8" id="orW-dZ-qJ2"/>
-                                                <constraint firstItem="UkJ-U9-qsP" firstAttribute="top" secondItem="fuj-Br-DmO" secondAttribute="bottom" constant="4" id="ppt-gs-lEb"/>
-                                                <constraint firstItem="fuj-Br-DmO" firstAttribute="trailing" secondItem="Cfe-ke-FAC" secondAttribute="trailing" constant="8" id="rfj-S7-NU8"/>
-                                                <constraint firstItem="Cfe-ke-FAC" firstAttribute="leading" secondItem="fuj-Br-DmO" secondAttribute="leading" constant="8" id="zRU-WK-tGh"/>
+                                                <constraint firstItem="fuj-Br-DmO" firstAttribute="top" secondItem="HPQ-c7-tn7" secondAttribute="top" constant="10" id="5vc-zm-wf1"/>
+                                                <constraint firstItem="UkJ-U9-qsP" firstAttribute="top" secondItem="Cfe-ke-FAC" secondAttribute="bottom" id="78L-V1-5gU"/>
+                                                <constraint firstItem="Cfe-ke-FAC" firstAttribute="bottom" secondItem="fuj-Br-DmO" secondAttribute="bottom" constant="10" id="C2J-Nz-mIA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Cfe-ke-FAC" secondAttribute="trailing" id="HV0-Dr-WBf"/>
+                                                <constraint firstItem="Cfe-ke-FAC" firstAttribute="leading" secondItem="HPQ-c7-tn7" secondAttribute="leading" id="ISc-ND-o0x"/>
+                                                <constraint firstItem="Cfe-ke-FAC" firstAttribute="top" secondItem="HPQ-c7-tn7" secondAttribute="top" id="nVx-cO-h9d"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>

@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var categoriesFlowLayout: UICollectionViewFlowLayout!
+    private let categoriesCollectionViewManager = CategoryCollectionViewManager()
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     @IBOutlet weak var productsFlowLayout: UICollectionViewFlowLayout!
@@ -37,6 +38,37 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     }
     
     private func observeViewModel() {
+        observeProductList()
+        observeCategoryList()
+        observeNetworkState()
+    }
+    
+    private func observeProductList() {
+        viewModel.onProductListUpdated = { [weak self] productList in
+            self?.activityIndicator.stopAnimating()
+            if productList.isEmpty {
+                self?.categoriesCollectionView.isHidden = true
+                self?.productsCollectionView.isHidden = true
+                self?.productNotFoundView.isHidden = false
+                self?.productNotFoundLabel.text = String(localized: "no_products_available")
+            } else {
+                self?.productsCollectionView.isHidden = false
+                self?.productNotFoundView.isHidden = true
+                self?.productsCollectionViewManager.productList = productList
+                self?.productsCollectionView.reloadData()
+            }
+        }
+    }
+    
+    private func observeCategoryList() {
+        viewModel.onCategoryListUpdated = { [weak self] categoryList in
+            self?.categoriesCollectionView.isHidden = false
+            self?.categoriesCollectionViewManager.categories = categoryList
+            self?.categoriesCollectionView.reloadData()
+        }
+    }
+    
+    private func observeNetworkState() {
         viewModel.onNetworkStateChanged = { [weak self] networkState in
             switch networkState {
                 case .idle:
@@ -47,21 +79,6 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
                     self?.handleSuccessState()
                 case .error:
                     self?.handleErrorState()
-            }
-        }
-        viewModel.onProductListUpdated = { [weak self] productList in
-            self?.activityIndicator.stopAnimating()
-            if productList.isEmpty {
-                self?.categoriesCollectionView.isHidden = true
-                self?.productsCollectionView.isHidden = true
-                self?.productNotFoundView.isHidden = false
-                self?.productNotFoundLabel.text = String(localized: "no_products_available")
-            } else {
-                self?.categoriesCollectionView.isHidden = false
-                self?.productsCollectionView.isHidden = false
-                self?.productNotFoundView.isHidden = true
-                self?.productsCollectionViewManager.productList = productList
-                self?.productsCollectionView.reloadData()
             }
         }
     }
@@ -110,8 +127,14 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     }
     
     private func initCategoriesCollectionView() {
-        categoriesCollectionView.delegate = self
-        categoriesCollectionView.dataSource = self
+        categoriesCollectionView.delegate = categoriesCollectionViewManager
+        categoriesCollectionView.dataSource = categoriesCollectionViewManager
+        categoriesCollectionViewManager.onCategorySelected = { [weak self] category in
+            // filterProducts by category
+        }
+        categoriesCollectionViewManager.onCategoriesUpdated = { [weak self] in
+            self?.categoriesCollectionView.reloadData()
+        }
     }
     
     private func initProductsCollectionView() {
