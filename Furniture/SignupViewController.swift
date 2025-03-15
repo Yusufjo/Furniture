@@ -25,7 +25,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     
-    
     @IBOutlet weak var signUpView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ class SignupViewController: UIViewController {
         }
     }
     
-        
     func localizeUIElements() {
         welcomeLabel.localize(localizableID: "welcome")
         nameLabel.localize(localizableID: "name")
@@ -48,7 +46,6 @@ class SignupViewController: UIViewController {
         passwordLabel.localize(localizableID: "password")
         confirmPasswordLabel.localize(localizableID: "confirm")
         alreadyHaveAccountLabel.localize(localizableID: "already")
-        
         signupButton.localize(localizableID: "signUp")
         signInButton.localize(localizableID: "signIn")
     }

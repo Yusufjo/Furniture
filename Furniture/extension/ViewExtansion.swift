@@ -39,18 +39,21 @@ extension UIButton {
         }
     }
 }
-extension LoginViewController{
-    func loginController() {
-        if emailTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true{
-            errorMessage(title: NSLocalizedString("error", comment: ""), message: NSLocalizedString("empty", comment: ""))
+
+
+
+extension UIButton {
+    func loginController(_ emailText: String, _ passwordText: String, onError: @escaping (String, String) -> Void, success: @escaping () -> Void) {
+        if emailText.isEmpty == true || passwordText.isEmpty == true{
+            onError( NSLocalizedString("error", comment: ""), NSLocalizedString("empty", comment: ""))
         }else{
-            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { result, error in
+            Auth.auth().signIn(withEmail: emailText, password: passwordText) { result, error in
                 if let error = error {
                     // Eğer hata varsa, mesaj göster
-                    self.errorMessage(title: NSLocalizedString("error", comment: ""), message: NSLocalizedString("errorMessage", comment: ""))
+                    onError( NSLocalizedString("error", comment: ""), NSLocalizedString("errorMessage", comment: ""))
                 } else {
                     // Eğer başarılı ise, seguiyi tetikle
-                    self.performSegue(withIdentifier: "toFurniture", sender: nil)
+                    success()
                 }
             }
         }

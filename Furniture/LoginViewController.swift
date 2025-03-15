@@ -27,8 +27,12 @@ class LoginViewController: UIViewController {
         loginView.addShadow()
         localizeUIElements()
     }
-    @IBAction func loginButton(_ sender: Any) {
-        loginController()
+    @IBAction func loginButton(_ sender: UIButton) {
+        sender.loginController(emailTextField.text ?? "", passwordTextField.text ?? "") { title , message in
+            self.errorMessage(title: title, message: message)
+        } success: {
+            self.performSegue(withIdentifier: "toFurniture", sender: nil)
+        }
     }
     
     func localizeUIElements() {
