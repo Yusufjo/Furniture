@@ -146,18 +146,8 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     }
     
     private func initCategoriesFlowLayout() {
-        let screenWidth = categoriesCollectionView.frame.width
-        let numberOfCells: CGFloat = 5
-        let spacing: CGFloat = 10
-        
-        let totalSpacing = spacing * (numberOfCells - 1)
-        let itemWidth = (screenWidth - totalSpacing) / numberOfCells
-        let itemHeight: CGFloat = 75
-        
         categoriesFlowLayout.scrollDirection = .horizontal
-        categoriesFlowLayout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-        categoriesFlowLayout.minimumLineSpacing = spacing
-        categoriesFlowLayout.minimumInteritemSpacing = spacing
+        categoriesFlowLayout.itemSize = CGSize(width: 60, height: 65)
     }
     
     override func viewWillLayoutSubviews() {
