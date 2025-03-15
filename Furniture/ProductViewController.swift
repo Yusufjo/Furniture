@@ -37,10 +37,7 @@ class ProductViewController: UIViewController, UICollectionViewDelegate ,UIColle
         productFlowLayout.scrollDirection = .horizontal
         // Do any additional setup after loading the view.
         
-        updatePrice()
-        updateItemLabel()
-        
-        
+
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         swipeGesture.direction = .right // Sağa kaydırma hareketi
         view.addGestureRecognizer(swipeGesture)
@@ -52,37 +49,7 @@ class ProductViewController: UIViewController, UICollectionViewDelegate ,UIColle
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
-    
-    @IBAction func artiButton(_ sender: Any) {
-        itemCount += 1
-        updateItemLabel()
-        updatePrice()
-    }
-    
-    @IBAction func eksiButton(_ sender: Any) {
-        if itemCount > 1 {
-            itemCount -= 1
-            updateItemLabel()
-            updatePrice()
-        }
-    }
-    
-    @IBAction func addCartButton(_ sender: Any) {
-    }
-    
-    @IBAction func favoriteButton(_ sender: Any) {
-    }
-    func updateItemLabel() {
-        itemLabel.text = "\(itemCount)"
-    }
-    
-    func updatePrice() {
-        let totalPrice = unitPrice * Double(itemCount)
-        priceLabel.text = "$\(totalPrice)"
-    }
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }

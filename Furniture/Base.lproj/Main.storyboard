@@ -294,93 +294,6 @@
                                 <color key="textColor" red="0.14082592729999999" green="0.14082592729999999" blue="0.14082592729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uv-7e-RpV">
-                                <rect key="frame" x="25" y="518" width="49" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="E5C-F3-mcb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cM-Bl-PBs">
-                                <rect key="frame" x="262" y="515" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="SE7-so-RfG"/>
-                                    <constraint firstAttribute="height" constant="30" id="Z3i-bg-uA8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="arti">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="artiButton:" destination="ZZg-x5-UJr" eventType="touchUpInside" id="xM4-a6-QNR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MU-Eh-0qF">
-                                <rect key="frame" x="343" y="515" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="55e-Ub-tw4"/>
-                                    <constraint firstAttribute="width" constant="30" id="zPd-PL-6cR"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="eksi">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="eksiButton:" destination="ZZg-x5-UJr" eventType="touchUpInside" id="Mdo-65-IR0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-qu-RaH">
-                                <rect key="frame" x="300" y="515" width="35" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7eB-aU-6D6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="CKp-nS-ppb"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Lb0-eL-RG1"/>
-                                    <constraint firstAttribute="width" constant="35" id="jUM-iN-mxi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="RAe-dt-Glv">
-                                <rect key="frame" x="25" y="567" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="37h-8Y-Rlm"/>
-                                    <constraint firstAttribute="width" constant="20" id="PF7-03-FSB"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOm-4d-eaO">
-                                <rect key="frame" x="53" y="567" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="D6V-ih-D40"/>
-                                    <constraint firstAttribute="height" constant="21" id="LP7-9d-cmm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(50 reviews)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1X-IR-Uzk">
-                                <rect key="frame" x="91" y="567" width="110" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="y58-T9-Pep"/>
-                                    <constraint firstAttribute="height" constant="17" id="yf0-sb-e8F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-oU-Gw6">
-                                <rect key="frame" x="20" y="604" width="353" height="142"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="uC4-mN-iTt"/>
-                                </constraints>
-                                <string key="text">Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-DL-a7O">
                                 <rect key="frame" x="154" y="350" width="154" height="26"/>
                                 <constraints>
@@ -412,47 +325,42 @@
                                     <color key="baseBackgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-oU-Gw6">
+                                <rect key="frame" x="20" y="535" width="353" height="142"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="uC4-mN-iTt"/>
+                                </constraints>
+                                <string key="text">Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gaH-Ab-6Wm"/>
                         <color key="backgroundColor" red="0.96568435429999999" green="0.96578258279999996" blue="0.96882599589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QOm-4d-eaO" firstAttribute="leading" secondItem="RAe-dt-Glv" secondAttribute="trailing" constant="8" symbolic="YES" id="1yY-yR-EQI"/>
-                            <constraint firstItem="2uv-7e-RpV" firstAttribute="top" secondItem="p8p-8f-rTN" secondAttribute="bottom" constant="8" symbolic="YES" id="5Hu-tc-tWY"/>
                             <constraint firstItem="gaH-Ab-6Wm" firstAttribute="trailing" secondItem="5fu-5Z-5wY" secondAttribute="trailing" constant="300" id="7KJ-kW-PvM"/>
                             <constraint firstItem="gaH-Ab-6Wm" firstAttribute="bottom" secondItem="XZH-e0-4ME" secondAttribute="bottom" constant="30" id="8cI-z9-tjI"/>
-                            <constraint firstItem="gaH-Ab-6Wm" firstAttribute="trailing" secondItem="6MU-Eh-0qF" secondAttribute="trailing" constant="20" id="9zC-dB-afR"/>
-                            <constraint firstItem="cNL-qu-RaH" firstAttribute="leading" secondItem="0cM-Bl-PBs" secondAttribute="trailing" constant="8" symbolic="YES" id="AEu-FW-1lp"/>
                             <constraint firstItem="gaH-Ab-6Wm" firstAttribute="trailing" secondItem="vBE-sR-2Am" secondAttribute="trailing" constant="290" id="Aau-sS-es2"/>
-                            <constraint firstItem="cNL-qu-RaH" firstAttribute="top" secondItem="6MU-Eh-0qF" secondAttribute="top" id="Avm-bQ-iwZ"/>
                             <constraint firstItem="5fu-5Z-5wY" firstAttribute="top" secondItem="gaH-Ab-6Wm" secondAttribute="top" constant="20" id="CRV-zq-rQe"/>
-                            <constraint firstItem="2uv-7e-RpV" firstAttribute="leading" secondItem="gaH-Ab-6Wm" secondAttribute="leading" constant="25" id="DDf-f8-p28"/>
                             <constraint firstItem="HB6-DL-a7O" firstAttribute="top" secondItem="ZNY-sh-dC5" secondAttribute="topMargin" constant="350" id="FCq-x0-Le2"/>
-                            <constraint firstItem="cNL-qu-RaH" firstAttribute="top" secondItem="H8t-Hc-Ete" secondAttribute="bottom" constant="50" id="GNZ-dt-ppk"/>
-                            <constraint firstItem="6MU-Eh-0qF" firstAttribute="leading" secondItem="cNL-qu-RaH" secondAttribute="trailing" constant="8" symbolic="YES" id="K4o-mV-pdB"/>
-                            <constraint firstItem="a9b-oU-Gw6" firstAttribute="top" secondItem="cNL-qu-RaH" secondAttribute="bottom" constant="59" id="KMO-P6-pZY"/>
+                            <constraint firstItem="a9b-oU-Gw6" firstAttribute="top" secondItem="p8p-8f-rTN" secondAttribute="bottom" constant="25" id="Jdn-wW-c5o"/>
                             <constraint firstItem="H8t-Hc-Ete" firstAttribute="trailing" secondItem="gaH-Ab-6Wm" secondAttribute="trailing" id="L0p-tv-0Ou"/>
                             <constraint firstItem="H8t-Hc-Ete" firstAttribute="top" secondItem="ZNY-sh-dC5" secondAttribute="top" id="MMy-yh-Ha7"/>
-                            <constraint firstItem="cNL-qu-RaH" firstAttribute="top" secondItem="0cM-Bl-PBs" secondAttribute="top" id="S6V-dK-oEx"/>
                             <constraint firstItem="gaH-Ab-6Wm" firstAttribute="trailing" secondItem="a9b-oU-Gw6" secondAttribute="trailing" constant="20" id="TVF-rg-xok"/>
                             <constraint firstItem="vBE-sR-2Am" firstAttribute="top" secondItem="ZNY-sh-dC5" secondAttribute="topMargin" constant="100" id="Uj1-CC-lol"/>
                             <constraint firstItem="a9b-oU-Gw6" firstAttribute="leading" secondItem="gaH-Ab-6Wm" secondAttribute="leading" constant="20" id="Wcq-j9-7RT"/>
-                            <constraint firstItem="RAe-dt-Glv" firstAttribute="leading" secondItem="gaH-Ab-6Wm" secondAttribute="leading" constant="25" id="b3J-V8-TnF"/>
-                            <constraint firstItem="x1X-IR-Uzk" firstAttribute="top" secondItem="p8p-8f-rTN" secondAttribute="bottom" constant="57" id="bbm-9a-xMI"/>
+                            <constraint firstItem="p8p-8f-rTN" firstAttribute="top" secondItem="H8t-Hc-Ete" secondAttribute="bottom" constant="18" id="bub-Qt-suX"/>
                             <constraint firstItem="gaH-Ab-6Wm" firstAttribute="trailing" secondItem="HB6-DL-a7O" secondAttribute="trailing" constant="85" id="dEf-bY-Kcs"/>
                             <constraint firstItem="p8p-8f-rTN" firstAttribute="leading" secondItem="gaH-Ab-6Wm" secondAttribute="leading" constant="24" id="e14-1w-AkP"/>
-                            <constraint firstItem="QOm-4d-eaO" firstAttribute="top" secondItem="2uv-7e-RpV" secondAttribute="bottom" constant="20" id="jtk-aH-oFn"/>
                             <constraint firstItem="XZH-e0-4ME" firstAttribute="leading" secondItem="gaH-Ab-6Wm" secondAttribute="leading" constant="43" id="n5F-nv-TPn"/>
-                            <constraint firstItem="x1X-IR-Uzk" firstAttribute="leading" secondItem="RAe-dt-Glv" secondAttribute="trailing" constant="46" id="nH1-Xn-7Kr"/>
-                            <constraint firstItem="a9b-oU-Gw6" firstAttribute="top" secondItem="QOm-4d-eaO" secondAttribute="bottom" constant="16" id="sTz-ML-Ddc"/>
-                            <constraint firstItem="RAe-dt-Glv" firstAttribute="top" secondItem="2uv-7e-RpV" secondAttribute="bottom" constant="20" id="yEz-TH-bjB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="knz-Qc-qmk"/>
                     <connections>
                         <outlet property="customView" destination="vBE-sR-2Am" id="VZi-PO-y5H"/>
-                        <outlet property="itemLabel" destination="cNL-qu-RaH" id="l0L-k7-BxQ"/>
                         <outlet property="pageControl" destination="HB6-DL-a7O" id="nFX-kT-kev"/>
-                        <outlet property="priceLabel" destination="2uv-7e-RpV" id="zMi-nP-vIv"/>
                         <outlet property="productCollectionView" destination="H8t-Hc-Ete" id="Z0E-Ex-X37"/>
                         <outlet property="productFlowLayout" destination="Dt5-3A-wY0" id="MgA-0m-S1s"/>
                         <outlet property="titleLabel" destination="p8p-8f-rTN" id="IHb-9x-dhu"/>
@@ -1541,7 +1449,6 @@
         <image name="HelloWelcomeBack" width="217" height="73"/>
         <image name="Shape" width="24" height="24"/>
         <image name="anasayfaUrun4" width="157" height="200"/>
-        <image name="arti" width="30" height="30"/>
         <image name="backbutton" width="112" height="120"/>
         <image name="backgroundPic" width="1500" height="3248"/>
         <image name="backgroundust" width="44" height="44"/>
@@ -1549,7 +1456,6 @@
         <image name="butonkahve" width="34" height="34"/>
         <image name="butonkrem" width="34" height="34"/>
         <image name="cizgi" width="105" height="1"/>
-        <image name="eksi" width="30" height="30"/>
         <image name="exit" width="20" height="20"/>
         <image name="home" width="24" height="24"/>
         <image name="marker" width="24" height="24"/>
@@ -1561,7 +1467,6 @@
         <image name="sellectedmarker" width="24" height="24"/>
         <image name="sellectedperson" width="24" height="24"/>
         <image name="sepets" width="30" height="30"/>
-        <image name="star" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
