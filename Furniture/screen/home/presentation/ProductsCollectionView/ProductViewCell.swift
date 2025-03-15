@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO omer create model class
 class ProductViewCell: UICollectionViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!

@@ -14,7 +14,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     @IBOutlet weak var productsFlowLayout: UICollectionViewFlowLayout!
-    private let productsCollectionViewManager = ProductsCollectionViewManager()
+    private let productsCollectionViewManager = ProductCollectionViewManager()
     
     @IBOutlet weak var productNotFoundView: UIView!
     @IBOutlet weak var productNotFoundLabel: UILabel!

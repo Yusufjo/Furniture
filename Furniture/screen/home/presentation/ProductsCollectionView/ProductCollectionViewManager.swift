@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ProductsCollectionViewManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProductCollectionViewManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     // CollectionView'ın kullanacağı data
     var productList: [ProductResponse] = [] {
