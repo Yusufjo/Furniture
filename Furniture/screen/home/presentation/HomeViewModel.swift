@@ -9,10 +9,10 @@ class HomeViewModel {
     
     private let productsRepository: ProductsRepository
     
-    private var _productList: [ProductResponse] = [] {
+    private var _productList: [ProductItem] = [] {
         didSet { onProductListUpdated?(_productList) }
     }
-    var productList: [ProductResponse] { _productList }
+    var productList: [ProductItem] { _productList }
     
     private var _categoryList: [CategoryItem] = [] {
         didSet { onCategoryListUpdated?(_categoryList) }
@@ -25,7 +25,7 @@ class HomeViewModel {
     var networkState: NetworkState { _networkState }
     
     
-    var onProductListUpdated: (([ProductResponse]) -> Void)?
+    var onProductListUpdated: (([ProductItem]) -> Void)?
     var onCategoryListUpdated: (([CategoryItem]) -> Void)?
     var onNetworkStateChanged: ((NetworkState) -> Void)?
     
@@ -39,7 +39,9 @@ class HomeViewModel {
             switch result {
                 case .success(let productList):
                     self?._networkState = .success
-                    self?._productList = productList
+                    self?._productList = productList.compactMap { response in
+                        ProductItem.from(productResponse: response)
+                    }
                     self?._categoryList = self?.getCategories() ?? []
                 case .failure(let error):
                     self?._networkState = .error

@@ -10,7 +10,7 @@ import Alamofire
 class ProductsRemoteDataSource {
     
     func getProducts(completion: @escaping (Result<[ProductResponse], Error>) -> Void) {
-        let url = "https://furniture-shopping-spring.onrender.com/api/products"
+        let url = C.BASE_URL + "products"
         AF.request(url).responseDecodable(of: [ProductResponse].self) { response in
             switch response.result {
                 case .success(let value):

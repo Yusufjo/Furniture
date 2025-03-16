@@ -20,7 +20,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var productNotFoundLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var viewModel: HomeViewModel!
-    var productList: [ProductResponse] { viewModel.productList }
+    var productList: [ProductItem] { viewModel.productList }
     
     var selectedCategory: String?
     override func viewDidLoad() {
@@ -153,6 +153,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
+        // TODO problematic
         let screenWidth = UIScreen.main.bounds.width
         let numberOfColumns: CGFloat = 2
         
