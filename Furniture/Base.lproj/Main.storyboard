@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b1t-ZA-vi6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Y2-41-RC0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -937,15 +937,15 @@
                         <viewLayoutGuide key="safeArea" id="9NO-tR-89X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bRK-TZ-IzK" firstAttribute="top" secondItem="9NO-tR-89X" secondAttribute="top" constant="97" id="6kw-LN-SPQ"/>
+                            <constraint firstItem="bRK-TZ-IzK" firstAttribute="top" secondItem="ovc-3j-s09" secondAttribute="top" constant="97" id="6kw-LN-SPQ"/>
                             <constraint firstItem="YSv-DK-yHT" firstAttribute="top" secondItem="Tj2-Oo-FUq" secondAttribute="bottom" constant="20" id="K8v-u0-qec"/>
                             <constraint firstItem="YSv-DK-yHT" firstAttribute="leading" secondItem="9NO-tR-89X" secondAttribute="leading" constant="30" id="PvE-9e-If3"/>
                             <constraint firstItem="eeY-72-lJn" firstAttribute="leading" secondItem="9NO-tR-89X" secondAttribute="leading" id="VKx-8H-CRp"/>
                             <constraint firstItem="eeY-72-lJn" firstAttribute="top" secondItem="YSv-DK-yHT" secondAttribute="bottom" constant="30" id="W9j-sq-r2a"/>
                             <constraint firstItem="9NO-tR-89X" firstAttribute="trailing" secondItem="eeY-72-lJn" secondAttribute="trailing" constant="30" id="dao-GH-aaK"/>
                             <constraint firstItem="Tj2-Oo-FUq" firstAttribute="centerX" secondItem="ovc-3j-s09" secondAttribute="centerX" id="i6d-lu-Ljv"/>
-                            <constraint firstItem="cbN-cw-Shn" firstAttribute="top" secondItem="9NO-tR-89X" secondAttribute="top" constant="97" id="p2S-qt-0Ic"/>
-                            <constraint firstItem="Tj2-Oo-FUq" firstAttribute="top" secondItem="9NO-tR-89X" secondAttribute="top" constant="65" id="qzz-Kn-gya"/>
+                            <constraint firstItem="cbN-cw-Shn" firstAttribute="top" secondItem="ovc-3j-s09" secondAttribute="top" constant="97" id="p2S-qt-0Ic"/>
+                            <constraint firstItem="Tj2-Oo-FUq" firstAttribute="top" secondItem="ovc-3j-s09" secondAttribute="top" constant="65" id="qzz-Kn-gya"/>
                             <constraint firstAttribute="right" secondItem="bRK-TZ-IzK" secondAttribute="right" constant="30" id="swS-5W-x7r"/>
                             <constraint firstItem="cbN-cw-Shn" firstAttribute="leading" secondItem="ovc-3j-s09" secondAttribute="leading" constant="30" id="yKg-zq-IZM"/>
                         </constraints>
@@ -1270,6 +1270,9 @@
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="Shape"/>
+                                                    <connections>
+                                                        <action selector="deleteButton:" destination="LEF-Um-8iz" eventType="touchUpInside" id="x0R-X9-uwV"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-Ts-K74">
                                                     <rect key="frame" x="335" y="90" width="38" height="38"/>

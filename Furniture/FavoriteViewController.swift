@@ -34,8 +34,16 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.favoriteImageView.image = UIImage(named: favorite.image)
         cell.favoriteTitleLabel.text = favorite.title
         
+        cell.deleteAction = { [weak self] in
+              guard let self = self else { return }
+            self.favorites.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic) // TableView'den sil
+            tableView.reloadData()
+          }
+        
         return cell
     }
+    
     @IBAction func addAllMyCartButtonTapped(_ sender: Any) {
     }
     

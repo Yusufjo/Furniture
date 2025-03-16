@@ -14,6 +14,8 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet weak var favoriteDeleteButton: UIButton!
     @IBOutlet weak var favoriteSepetButton: UIButton!
     
+    var deleteAction: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +26,8 @@ class FavoriteTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    @IBAction func deleteButton(_ sender: Any) {
+        deleteAction?()
+    }
+    
 }
